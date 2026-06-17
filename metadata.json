@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Telegram Bot Center",
+  "description": "Панель управления Telegram-ботами на React, Tauri, TypeScript и Tailwind CSS с эстетичным темным интерфейсом.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

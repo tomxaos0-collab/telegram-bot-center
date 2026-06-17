@@ -11,7 +11,10 @@
     "lint": "tsc --noEmit",
     "tauri": "tauri",
     "app:dev": "tauri dev",
-    "app:build": "tauri build"
+    "app:build": "tauri build",
+    "install:local": "bash ./install.sh",
+    "uninstall:local": "bash ./uninstall.sh",
+    "release:package": "bash ./scripts/package-release.sh"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

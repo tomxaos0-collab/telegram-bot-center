@@ -39,7 +39,7 @@ sudo pacman -S --needed base-devel curl wget file openssl webkit2gtk-4.1 librsvg
 
 ## Сборка
 
-Для создания исполняемого файла выполните:
+Для создания исполняемого файла вручную выполните:
 
 ```bash
 npm run app:build
@@ -48,32 +48,41 @@ npm run app:build
 Бинарный файл после сборки будет находиться по пути:
 `src-tauri/target/release/telegram-bot-center`
 
-## Установка локально
+## Локальная установка
 
-Вы можете скопировать бинарный файл в вашу локальную папку `bin`:
+Для автоматической сборки, копирования бинарника и создания ярлыка в меню приложений выполните команды:
 
 ```bash
-mkdir -p ~/.local/bin/telegram-bot-center
-cp src-tauri/target/release/telegram-bot-center ~/.local/bin/telegram-bot-center/telegram-bot-center
-chmod +x ~/.local/bin/telegram-bot-center/telegram-bot-center
+chmod +x install.sh uninstall.sh
+./install.sh
 ```
 
-## Ярлык .desktop
-
-Для запуска приложения через меню системы создайте файл `~/.local/share/applications/telegram-bot-center.desktop`:
-
-```ini
-[Desktop Entry]
-Type=Application
-Name=Telegram Bot Center
-Comment=Управление Telegram-ботами
-Exec=/home/USER/.local/bin/telegram-bot-center/telegram-bot-center
-Icon=utilities-terminal
-Terminal=false
-Categories=Utility;Development;
-StartupNotify=true
+Или через npm:
+```bash
+npm run install:local
 ```
-*(Замените `USER` на ваше имя пользователя)*
+
+После установки приложение появится в меню KDE/GNOME (или на рабочем столе) как **Telegram Bot Center**.
+
+## Обновление
+
+После того, как вы скачаете (или напишете) новые изменения в коде, просто запустите:
+
+```bash
+./install.sh
+```
+
+Скрипт сам закроет старую версию, соберёт новую, заменит бинарный файл и обновит ярлык.
+
+## Удаление
+
+Для удаления установленного приложения:
+
+```bash
+npm run uninstall:local
+```
+
+**Важно:** Скрипт удаления стирает только бинарные файлы и ярлыки. Ваши пользовательские данные (база данных SQLite, добавленные боты, токены) не удаляются автоматически.
 
 ## Безопасность
 

@@ -787,6 +787,12 @@ export default function App() {
             onSeedLogs={handleSeedLogsForce}
           />
         );
+      case 'updates':
+        return (
+          <UpdateManager
+            onLogMessage={handleLogMessageCustom}
+          />
+        );
       default:
         return (
           <div className="flex-1 flex items-center justify-center text-zinc-500">

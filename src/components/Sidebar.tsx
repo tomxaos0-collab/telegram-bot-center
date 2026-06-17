@@ -22,10 +22,12 @@ export default function Sidebar({
     { id: 'chats', name: 'Чаты', icon: MessageSquare, badge: bots.length > 0 ? 3 : undefined },
     { id: 'messages', name: 'Сообщения', icon: Send },
     { id: 'webhook', name: 'Webhook', icon: LinkIcon },
-    { id: 'routes', name: 'Маршруты', icon: Route },
+    { id: 'templates', name: 'Шаблоны', icon: Layout },
     { id: 'logs', name: 'Логи', icon: Terminal },
+    { id: 'updates', name: 'Обновления', icon: DownloadCloud },
     { id: 'settings', name: 'Настройки', icon: Settings }
-  ];
+    ];
+
 
   return (
     <aside className="w-64 border-r border-[#1f1f22] bg-[#0c0c0d] flex flex-col select-none">

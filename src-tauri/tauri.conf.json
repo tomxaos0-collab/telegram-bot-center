@@ -35,12 +35,5 @@
     "devUrl": "http://localhost:3000",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
-  },
-  "plugins": {
-    "updater": {
-      "endpoints": [
-        "https://github.com/tomxaos0-collab/telegram-bot-center/releases/latest/download/latest.json"
-      ]
-    }
   }
 }
